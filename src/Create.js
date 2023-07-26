@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Create = () => {
   const [title, setTitle] = useState(""); // create state for title to be stored
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("mario");
-  const [isPending, setIsPending] = useState(false); //here
+  const [isPending, setIsPending] = useState(false);
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const blog = { title, body, author };
 
-    setIsPending(true); //here
+    setIsPending(true);
 
     fetch("http://localhost:8000/blogs", {
       method: "POST",
@@ -19,9 +21,9 @@ const Create = () => {
     }).then(() => {
       console.log("new blog added");
 
-      setTimeout(() => {
-        setIsPending(false); //here
-      }, 1500);
+      setIsPending(false);
+      // history.go(-1); // go back one through history
+      history.push("/"); // go back to homepage
     });
   };
 
