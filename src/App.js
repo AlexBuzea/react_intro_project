@@ -7,7 +7,7 @@ import NotFound from "./NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react_intro_project">
       <div className="App">
         <Navbar />
         <div className="content">
