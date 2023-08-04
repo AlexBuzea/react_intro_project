@@ -34,7 +34,7 @@ const Create = () => {
     setIsPending(true);
 
     fetch(
-      "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/db",
+      "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/blogs",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" }, // the type of content you're sending, json in this case
