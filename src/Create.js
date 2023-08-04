@@ -8,17 +8,39 @@ const Create = () => {
   const [isPending, setIsPending] = useState(false);
   const history = useHistory();
 
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const blog = { title, body, author };
+
+  //   setIsPending(true);
+
+  //   fetch("http://localhost:8000/blogs", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" }, // the type of content you're sending, json in this case
+  //     body: JSON.stringify(blog),
+  //   }).then(() => {
+  //     console.log("new blog added");
+
+  //     setIsPending(false);
+  //     // history.go(-1); // go back one through history
+  //     history.push("/"); // go back to homepage
+  //   });
+  // };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const blog = { title, body, author };
 
     setIsPending(true);
 
-    fetch("http://localhost:8000/blogs", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" }, // the type of content you're sending, json in this case
-      body: JSON.stringify(blog),
-    }).then(() => {
+    fetch(
+      "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/db",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" }, // the type of content you're sending, json in this case
+        body: JSON.stringify(blog),
+      }
+    ).then(() => {
       console.log("new blog added");
 
       setIsPending(false);
