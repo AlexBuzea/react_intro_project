@@ -28,14 +28,14 @@ const BlogDetails = () => {
     error,
     isPending,
   } = useFetch(
-    "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/blogs" +
+    "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/blogs/" +
       id
   ); //fetch data wanted
   const history = useHistory();
 
   const handleClick = () => {
     fetch(
-      "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/blogs" +
+      "https://my-json-server.typicode.com/AlexBuzea/react_intro_project/blogs/" +
         blog.id,
       {
         method: "DELETE",
