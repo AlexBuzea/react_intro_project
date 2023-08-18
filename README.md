@@ -1,18 +1,13 @@
 [Preview of app](https://alexbuzea.github.io/react_intro_project/)
 
-App functionality is limited for the preview, will not be able to add new posts and remove them as didn't have time to deploy the backend.
+App functionality is limited for the preview, and you will not be able to add new posts or remove them, as I didn't have time to deploy the backend.
 
-The best way to run this app is to clone it locally and run it locally where it is using a fake JSON server. After cloning the repo following steps can be followed:
+The best way to run this app is to clone it locally and run it locally, where it is using a fake JSON server. After cloning the repo, you can follow these steps:
 
-1.Run **npm install** (to install dependencies)
-
-2. Uncomment the handlesubmit function in create component, and remove the existing one. Uncomment the blogdetails and handleclick in BlogDetails component and remove the existing code for these functions. Same process for Home component. This will switch to fetching from the fake JSON server ran locally
-
-
-3.Run **npx json-server --watch data/db.json --port 8000** (to run JSON server locally)
-
+1. Run **npm install** (to install dependencies)
+2. Uncomment the `handlesubmit` function in the create component and remove the existing one. Uncomment the `blogdetails` and `handleclick` in the BlogDetails component and remove the existing code for these functions. Same process for the Home component. This will switch to fetching from the fake JSON server running locally.
+3. Run **npx json-server --watch data/db.json --port 8000** (to run JSON server locally)
 4. Run **npm run start** (this will start the app locally)
-
 
 
 
