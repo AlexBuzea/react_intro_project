@@ -32,7 +32,7 @@ const useFetch = (url) => {
             setError(err.message);
           }
         });
-    }, 1000);
+    }, 100);
 
     return () => abortCont.abort(); // cleanup function to stop fetch
   }, [url]); // => whenever url change it will re-run function
